@@ -1,0 +1,81 @@
+.box-social {
+    z-index: 900;
+    list-style: none;
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @include mq('phone-sm') {
+        display: none;
+    }
+
+    @include mq('tablet') {
+        display: block;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+.facebook,
+.twitter,
+.instagram,
+.google,
+.linkedin,
+.another,
+.youtube {
+    @include trans;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.google {
+    background: #dd4b39;
+    color: white;
+}
+
+.linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.instagram {
+    background: #E1306C;
+    color: white;
+}
+
+.snapchat {
+    background: #FFFC00;
+    color: white;
+}
+
+.another {
+    background: rgb(211, 0, 0);
+    color: white;
+}

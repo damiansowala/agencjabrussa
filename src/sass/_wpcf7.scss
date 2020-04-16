@@ -1,0 +1,103 @@
+.wpcf7 {
+
+    // Field Container
+    .rtp-form-field {
+        clear: both;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+
+    // Label
+    label {
+        font-weight: bold;
+        float: left;
+        margin-bottom: 4px;
+        width: 100%;
+    }
+
+    .wpcf7-form-control-wrap {
+        float: left;
+        display: block;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    // Input, Textarea, Button
+    input {
+        font-size: 1em;
+        float: left;
+        height: 35px;
+        padding: 0 5px;
+        width: 100%;
+    }
+
+    textarea {
+        height: 100px;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .wpcf7-submit {
+        height: 35px;
+        width: 100%;
+    }
+
+    // Validation
+    .wpcf7-validation-errors {
+        background-color: #f2dede;
+        border-color: #eed3d7;
+        color: #b94a48;
+        clear: both;
+        margin: 15px 0 0;
+        overflow: hidden;
+        padding: 8px 10px;
+    }
+
+    .wpcf7-mail-sent-ok {
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        color: #468847;
+        clear: both;
+        margin: 15px 0 0;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .wpcf7-not-valid-tip {
+        border: 0;
+        color: #b94a48;
+        font-size: 1em;
+        left: 5px;
+        padding: 0 2px;
+        position: absolute;
+        top: 7px;
+        width: 80%;
+        z-index: 100;
+    }
+
+    span.required {
+        color: #b94a48;
+    }
+}
+
+// Additional Fixing
+// Button
+#content .wpcf7 .btn-container {
+    text-align: center;
+    margin-bottom: 0;
+    overflow: visible;
+    position: relative;
+}
+
+// Ajax Loader
+#content img.ajax-loader {
+    bottom: -25px;
+    left: 49%;
+    margin: 10px 0 0;
+    position: absolute;
+}
+
+// IE Fixing
+.ie8 .wpcf7 input {
+    line-height: 35px;
+}

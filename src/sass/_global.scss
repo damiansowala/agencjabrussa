@@ -1,0 +1,289 @@
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.page-not {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $light;
+        padding: 50px;
+
+        border-radius: 100%;
+
+        @include mq('phone-sm') {
+            width: 300px;
+            height: 300px;
+        }
+
+        @include mq('desktop') {
+            width: 400px;
+            height: 400px;
+        }
+
+        h1 {
+            margin: 0;
+
+            @include mq('phone-sm') {
+                font-size: 48px;
+            }
+
+            @include mq('desktop') {
+                font-size: 72px;
+            }
+        }
+
+        h4 {
+            text-align: center;
+
+            @include mq('phone-sm') {
+                font-size: 18px;
+            }
+
+            @include mq('desktop') {
+                font-size: 22px;
+            }
+        }
+
+        a {
+            margin-top: 25px;
+        }
+
+    }
+}
+
+.global-alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    background-color: palevioletred;
+    color: white;
+    font-family: "Lato-Regular";
+    @include card-1;
+
+    p {
+        margin: 0;
+        text-align: center;
+
+        @include mq('phone-sm') {
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        @include mq('desktop') {
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        span {
+            @include mq('phone-sm') {
+                font-size: 12px;
+            }
+
+            @include mq('desktop') {
+                font-size: 18px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.info-alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    background-color: palevioletred;
+    color: white;
+    font-family: "Lato-Regular";
+
+    p {
+        margin: 0;
+        text-align: center;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+
+.btn {
+    border: none;
+
+    &-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $dark;
+        position: relative;
+        color: white;
+        @include card-1;
+
+        &:hover {
+            text-decoration: none;
+            @include card-1-hover;
+            color: $accent;
+
+            &::after {
+                color: $darker;
+            }
+        }
+
+        &::after {
+            content: "\f101";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: $accent;
+            padding: 13px 20px;
+            font-size: 20px;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        width: 75px;
+        font-size: 24px;
+        background-color: yellowgreen;
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-primary {
+        background-color: $accent;
+
+        &:hover {
+            background-color: $accent-hover;
+        }
+    }
+
+    &-secondary {
+        background-color: $light;
+
+        &:hover {
+            background-color: $light-hover;
+        }
+    }
+
+    &-dark {
+        background-color: $darker;
+
+        &:hover {
+            background-color: $darker-hover;
+        }
+    }
+}
+
+.slick {
+
+    &-prev,
+    &-next {
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            line-height: 0.5;
+            font-size: 48px;
+        }
+    }
+
+    &-prev {
+        left: -50px;
+
+        &::before {
+            content: "\f053";
+        }
+    }
+
+    &-next {
+        right: -30px;
+
+        &::before {
+            content: "\f054";
+        }
+    }
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 25px 0px;
+
+    .page-numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        background-color: $dark;
+        color: wheat;
+        border-radius: 50%;
+        margin: 2px;
+        font-size: 14px;
+
+        &:hover {
+            background-color: $darker-hover;
+        }
+    }
+
+    .current {
+        background-color: $accent;
+
+        &:hover {
+            background-color: $accent;
+        }
+    }
+
+    .dots {
+        &:hover {
+            background-color: $dark;
+        }
+    }
+}
+
+.form-check-label {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#modalSearch {
+    .form-inline {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        .form-control {
+            width: 85%;
+            height: 50px;
+        }
+    }
+}

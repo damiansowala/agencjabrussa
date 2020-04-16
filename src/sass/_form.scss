@@ -1,0 +1,69 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    select,
+    textarea {
+        margin-bottom: 10px;
+        border-radius: $radius;
+    }
+
+    input[type="submit"] {
+        margin: 20px 0px;
+    }
+
+    &-m {
+        padding: 0px 20px;
+    }
+
+    &-modal {}
+
+    &-body {}
+
+    &-info {
+        font-size: 13px;
+        line-height: 16px;
+        font-style: italic;
+
+        &__p {
+            padding: 0px 20px;
+        }
+    }
+}
+
+
+#info {
+    .modal-body {
+        p {
+            text-align: center;
+        }
+    }
+
+    .alert {
+        text-align: center;
+    }
+}
+
+#order-date {
+
+    .modal-body {
+        input {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: flex;
+            font-size: 12px;
+
+            input {
+                width: inherit;
+            }
+        }
+    }
+
+    .alert {
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,79 @@
+.albums {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &-card {
+        margin-bottom: 25px;
+
+        .col-md-3 {
+            &:first-child {
+                margin-bottom: 50px;
+            }
+
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+.album {
+    margin-bottom: 50px;
+
+    &-playlist {
+        margin-top: 50px;
+
+        li {
+            padding-left: 10px;
+
+            b {
+                content: '\A';
+                white-space: pre;
+            }
+        }
+    }
+
+    &-header {
+        background-color: $light;
+        color: $white;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    &-total {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .form-control {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+
+        &-delivery {
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+        }
+
+        &-price {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+
+            em,
+            span {
+                text-align: right;
+            }
+
+            em {
+                font-size: 14px;
+            }
+        }
+    }
+}

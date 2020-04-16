@@ -1,0 +1,303 @@
+.home {
+
+    a {
+        @include trans;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &_header {
+
+        @include upper;
+        color: white;
+        margin-bottom: 50px;
+        background-color: $dark;
+
+        clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+
+        @include mq('phone-sm') {
+            font-size: 28px;
+            margin-top: 20px;
+            padding: 0px 15px;
+        }
+
+        @include mq('desktop-wide') {
+            font-size: 48px;
+            margin-top: 50px;
+            padding: 10px 20px;
+        }
+
+        &__w-min {
+            width: min-content;
+        }
+    }
+
+    &-offer {
+        margin-bottom: 100px;
+        padding: 50px 0px;
+
+        &:nth-child(odd) {
+            background-color: rgba(236, 236, 236, 0.3);
+        }
+
+        &:nth-child(even) {
+            .row {
+                flex-direction: row-reverse;
+            }
+        }
+
+        article {
+            h1 {
+                color: $light;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            @include card-1;
+        }
+
+        .col-lg-4 {
+            padding: 0;
+        }
+
+        .col-lg-8 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .col-lg-4 {
+            &:first-child {
+                @include mq('tablet') {
+                    display: none;
+                }
+
+                @include mq('desktop-wide') {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-calendary {
+        margin-bottom: 50px;
+
+        .container-fluid {
+            margin-top: 50px;
+            background-color: $darkest;
+
+        }
+
+
+        a {
+            position: relative;
+            display: block;
+        }
+
+    }
+
+    &-photo {
+        margin-bottom: 50px;
+        @include card-1;
+
+        a {
+
+            .card,
+            .card-img {
+                border-radius: 0;
+                border: none;
+
+                .card-img-overlay {
+                    color: white;
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-direction: column;
+
+                    h3,
+                    h1 {
+                        margin: 0px;
+                        background-color: $light;
+                        padding: 5px 10px;
+
+                    }
+
+                    h1 {
+                        font-size: 42px;
+                    }
+
+                    h4 {
+                        width: fit-content;
+                        background-color: $light-hover;
+                        padding: 5px 10px;
+                        margin: 0px;
+                    }
+
+                    span {
+                        width: fit-content;
+                        margin: 0px;
+                        background-color: $dark;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+
+        .row {
+            .col-lg-6:first-child {
+                padding: 0px;
+            }
+
+            .col-lg-6:last-child {
+                .col-sm-6 {
+                    padding: 0px;
+
+
+                }
+            }
+        }
+
+        .row:last-child {
+
+            .col-lg-7 {
+                background-color: $dark;
+                height: 50px;
+                line-height: 45px;
+
+                a {
+                    display: block;
+                    text-align: right;
+                    color: $white;
+
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+
+    &-our {
+        margin-bottom: 100px;
+
+
+        &-card {
+            position: relative;
+            @include card-1;
+        }
+
+        &-content {
+            z-index: 100;
+            color: white;
+
+            @include mq('phone-sm') {
+                width: 100%;
+            }
+
+            @include mq('desktop-wide') {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 35%;
+            }
+
+            .content {
+                background-color: $light;
+                padding: 20px 40px;
+            }
+
+            h1 {
+                display: inline-block;
+                margin: 0;
+                background-color: $dark;
+                @include upper;
+
+
+                @include mq('phone-sm') {
+                    font-size: 32px;
+                    padding: 15px 0px;
+                }
+
+                @include mq('tablet') {
+                    font-size: 32px;
+                    padding: 25px 100px;
+                }
+
+                @include mq('desktop-wide') {
+                    font-size: 48px;
+                    padding: 25px 100px;
+                }
+            }
+
+            .btn-more {
+                @include upper;
+                width: min-content;
+                padding: 45px 100px;
+
+            }
+        }
+    }
+
+    &-newsletter {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+
+        #mailpoet_form_2 {
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+
+                @include mq('phone-sm') {
+                    margin-top: 50px;
+                }
+
+                @include mq('tablet') {
+                    margin-top: 0px;
+                }
+
+                .mailpoet_message {
+                    width: 100%;
+                }
+
+                .mailpoet_paragraph {
+                    input {
+                        height: 50px;
+                        margin: 25px 5px;
+                        width: 250px;
+                        text-align: center;
+
+                        @include mq('phone-sm') {
+                            margin: 0px 5px;
+                        }
+
+                        @include mq('tablet') {
+                            margin: 25px 5px;
+                        }
+
+                        &::placeholder {
+                            text-align: center;
+
+                        }
+                    }
+
+                    input[type="submit"] {
+                        background-color: $light;
+                        color: white;
+                        box-shadow: none;
+                        text-shadow: none;
+                        border: none;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}

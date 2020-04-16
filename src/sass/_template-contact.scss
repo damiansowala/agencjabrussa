@@ -1,0 +1,120 @@
+.contact {
+    &-info {
+        background-color: $dark;
+        color: white;
+
+        @include mq('phone-sm') {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+
+        @include mq('tablet') {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: inherit;
+        }
+
+        a {
+            color: $accent;
+            @include trans;
+
+            &:hover {
+                color: $accent-hover;
+            }
+        }
+    }
+
+    &-person {
+        margin-top: 50px;
+
+        img {
+            border-radius: $radius;
+        }
+
+        .col-md-6 {
+            margin-bottom: 25px;
+        }
+
+        h4 {
+            width: min-content;
+        }
+
+        P,
+        a {
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 14px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                color: $light;
+                @include trans;
+
+                &::before,
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    margin-right: 5px;
+                }
+
+                &:first-child {
+                    &::before {
+                        content: "\f0e0";
+                    }
+                }
+
+                &:last-child {
+                    &::before {
+                        content: "\f10b";
+                    }
+                }
+
+                &:hover {
+                    color: $light-hover;
+                }
+            }
+        }
+    }
+
+    &-note {
+        background-color: $light;
+        color: $white;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        margin: 25px 0px 50px 0px;
+
+        @include mq('phone-sm') {
+            margin-bottom: 50px;
+        }
+
+        @include mq('tablet') {
+            margin: 25px 0px 50px 0px;
+        }
+
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-map {
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            vertical-align: middle;
+        }
+
+        @include mq('phone-sm') {
+            margin-bottom: 50px;
+        }
+
+        @include mq('tablet') {
+            margin: inherit;
+        }
+    }
+}

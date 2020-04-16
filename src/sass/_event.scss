@@ -1,0 +1,422 @@
+.event {
+
+    article {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-postponed {
+        background-color: $light-transparent !important;
+    }
+
+    &-cancelled {
+        background-color: $danger-transparent !important;
+    }
+
+    &-head {
+        h1 {
+            @include mq('phone-sm') {
+                text-align: left;
+            }
+
+
+            @include mq('tablet') {
+                text-align: right;
+            }
+        }
+    }
+
+    &-header {
+        margin: 50px 0px;
+        @include upper;
+
+        @include mq('phone-sm') {
+            font-size: 24px;
+        }
+
+        @include mq('phone') {
+            font-size: 32px;
+        }
+
+        @include mq('tablet') {
+            font-size: 48px;
+        }
+    }
+
+    &-filter {
+        display: flex;
+
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        @include mq('phone-sm') {
+            flex-direction: column;
+        }
+
+        @include mq('tablet') {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+
+        &__group {
+            flex-direction: column;
+
+            @include mq('phone-sm') {
+                flex-direction: 100%;
+            }
+
+            @include mq('tablet') {
+                display: flex;
+                width: 22%;
+            }
+
+            @include mq('desktop') {
+                display: flex;
+                width: 12%;
+            }
+
+            legend {
+                font-size: 12px;
+                color: $grey;
+
+                @include mq('phone-sm') {
+                    margin-top: 10px;
+                }
+
+                @include mq('desktop') {
+                    margin-top: 0px;
+                }
+            }
+        }
+
+
+
+    }
+
+    &-alert {
+        text-align: center;
+        background-color: $accent;
+        color: white;
+        padding: 20px 0px;
+        margin: 20px 0px;
+
+        &__cancel {
+            background-color: rgb(170, 0, 0);
+            color: white;
+        }
+
+        &__transfer {
+            background-color: $light-transparent;
+            color: $dark;
+
+            a {
+                color: $dark;
+                font-weight: bold;
+                @include trans;
+
+                &:hover {
+                    color: $dark-hover
+                }
+            }
+        }
+    }
+
+    &-items {
+        margin-bottom: 50px;
+    }
+
+    &-item-alert {
+        text-align: center;
+        margin: 100px 0px;
+    }
+
+    &-color {
+        position: absolute;
+        left: -7px;
+        display: block;
+        width: 7px;
+        height: 100%;
+        z-index: 400;
+        @include trans;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: rgba(248, 248, 248, 0.553);
+
+        border: 1px solid rgba(207, 207, 207, 0.853);
+        border-bottom: none;
+        color: $light;
+        @include trans;
+        color: rgb(114, 114, 114);
+
+
+        @include mq('phone-sm') {}
+
+        @include mq('tablet') {
+            padding: 10px 30px 10px 0px;
+        }
+
+        article {
+            @include mq('phone-sm') {
+                width: inherit;
+            }
+
+            @include mq('tablet') {
+                width: 100%;
+            }
+        }
+
+        &:last-child {
+            border-bottom: 1px solid rgba(207, 207, 207, 0.853);
+        }
+
+        &:hover {
+            .event-color {
+                width: 14px;
+                left: -14px;
+            }
+        }
+
+        &__p0 {
+            @include mq('phone-sm') {
+                padding: 0px;
+            }
+
+            @include mq('tablet') {
+                padding: 0px 10px 0px 0px;
+            }
+
+            @include mq('desktop') {
+                padding: 0px 50px 0px 0px;
+            }
+
+            .col-lg-9 {
+                @include mq('phone-sm') {
+                    padding-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                @include mq('phone') {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+
+                @include mq('tablet') {
+                    padding-top: 15px;
+                }
+
+                @include mq('desktop') {
+                    padding-top: 20px;
+                }
+
+                h5 {
+                    @include upper;
+
+                    @include mq('phone-sm') {
+                        padding: 0px 20px;
+                    }
+
+                    @include mq('tablet') {
+                        padding: 0px;
+                    }
+                }
+
+                span {
+                    display: flex;
+                    font-size: 14px;
+                    line-height: 14px;
+                    margin-bottom: 5px;
+
+                    @include mq('phone-sm') {
+                        padding: 0px 20px;
+                    }
+
+                    @include mq('tablet') {
+                        padding: 0px;
+                    }
+
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+
+        h2 {
+            font-size: 18px;
+        }
+
+        span {
+            display: block;
+            font-size: 14px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+
+
+
+    &-date {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+
+        span {
+            display: block;
+            font-size: 14px;
+            line-height: 28px;
+
+            &:nth-child(even) {
+                font-weight: 900;
+                font-size: 36px;
+            }
+        }
+
+        &__ab {
+            position: absolute;
+            color: $white;
+            background-color: $dark;
+        }
+    }
+
+    &-link {
+        color: $white;
+        @include trans;
+
+        &:hover {
+            color: $accent;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    &-place {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 14px;
+        line-height: 28px;
+        color: $white;
+        background-color: $dark;
+        padding: 3px 20px;
+        @include upper;
+    }
+
+    &-box {
+        h5 {
+            font-weight: bolder;
+            margin-bottom: 25px;
+            margin-top: 50px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        &__bg {
+            padding: 20px;
+            background-color: $darker;
+            color: $white;
+            border-bottom: 1px solid $white;
+
+            h5 {
+                margin-top: 0px;
+            }
+        }
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+
+    &-col {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        &:last-child {
+            border-left: 1px solid rgba(207, 207, 207, 0.853);
+            padding-left: 15px;
+        }
+    }
+
+    &-concluded {
+        filter: grayscale(100%);
+
+        h1 {
+            @include upper;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+    }
+
+    &-concluded,
+    &-active {
+        h1 {
+            @include upper;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        .row {
+            @include mq('phone-sm') {}
+
+            @include mq('phone') {}
+
+            @include mq('tablet') {}
+
+            @include mq('desktop') {}
+        }
+    }
+
+
+}
+
+
+
+
+
+.single-events {
+
+    .container,
+    .home_header {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+
+}
